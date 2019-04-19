@@ -9,8 +9,10 @@
 	try {
 		DBManager db = DBManager.getInstance();
 		Connection con = db.open();
-
-		String query = "select al.name, al.url, al.abv, var.variation, cat.name from alcohol as al join variation as var on var.id=al.variation join category as cat on cat.id=al.category";
+		//		String name = "처음처럼 진한";
+		String name = request.getParameter("name");
+		String query = "select al.name, al.url, al.abv, var.variation, cat.name from alcohol as al join variation as var on var.id=al.variation join category as cat on cat.id=al.category where var.variation='"
+				+ name + "'";
 		PreparedStatement stmt = con.prepareStatement(query);
 		// 4. SQL (Query) 실행
 		ResultSet rs = stmt.executeQuery();
@@ -23,8 +25,8 @@
 %>
 <form method="post" action="">
 	<input type="text" name="variation" value="<%=aVariation%>"><br>
-	<input type="text" name="abv" value="<%=aAbv%>"><br> 
-	<input type="url" name="url" value="<%=aUrl%>">
+	<input type="text" name="abv" value="<%=aAbv%>"><br> <input
+		type="url" name="url" value="<%=aUrl%>">
 	<%-- 	<input type="text" name="category" value="<%=aCategory%>"><br> --%>
 </form>
 
