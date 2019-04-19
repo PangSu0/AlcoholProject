@@ -1,5 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
+<script>
+    $(window).resize(function (){
+  // width값을 가져오기
+  var width_size = window.outerWidth;
+  
+  // 800 이하인지 if문으로 확인
+  if (width_size <= 800) {
+    alert('Curren width <= 800px');
+  }
+})
+</script>
+
 
 <html lang="en">
 	<head>
@@ -39,16 +53,18 @@
 			<div class="row">
 				<div class="col-sm-5"></div>
 				<div class="col-sm-3">
+					<script>
+	    			function closeSite()
+	    			{
+	    				window.close();
+	    			}
+					</script>
 					<button type="button" class="btn btn-danger" onclick="location='home.jsp'">YES</button>
-					<button type="button" class="btn btn-danger"></button>
+					<button type="button" class="btn btn-danger" onclick="closeSite()">NO</button>
 					</div>
 				<div class="col-sm-4"></div>
 			</div>
 		</div>
 	</body>
 </html>
-<script>
 
-
-
-</script>
