@@ -11,6 +11,7 @@
 		Connection con = db.open();
 		//		String name = "처음처럼 진한";
 		String name = request.getParameter("name");
+		//.split(".")[0];
 		String query = "select al.name, al.url, al.abv, var.variation, cat.name from alcohol as al join variation as var on var.id=al.variation join category as cat on cat.id=al.category where var.variation='"
 				+ name + "'";
 		PreparedStatement stmt = con.prepareStatement(query);
@@ -23,13 +24,11 @@
 			String aVariation = rs.getString("var.variation");
 			String aCategory = rs.getString("cat.name");
 %>
-<form method="post" action="">
-	<input type="text" name="variation" value="<%=aVariation%>"><br>
-	<input type="text" name="abv" value="<%=aAbv%>"><br> <input
-		type="url" name="url" value="<%=aUrl%>">
-	<%-- 	<input type="text" name="category" value="<%=aCategory%>"><br> --%>
-</form>
-
+<ul class="list-group">
+  <li class="list-group-item">제품명: <%=aVariation%></li>
+  <li class="list-group-item">도수: <%=aAbv%></li>
+  <li class="list-group-item"><a href=<%=aUrl%>>제품 정보</a></li>
+</ul>
 <%
 	}
 	} catch (Exception e) {
