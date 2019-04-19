@@ -38,22 +38,24 @@
 		<div class="container-map">
 			<div class="row">
 				<div class="col-sm-2"></div>
-				<a href="soju.jsp"><img src="img/soju/soju00.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju01.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju02.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju03.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju04.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju05.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju06.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju07.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju08.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju09.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju10.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju11.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju12.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju13.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju14.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
-				<a href="soju.jsp"><img src="img/soju/soju15.png" class="rounded" alt="Cinque Terre" width="150" height="236"> </a>
+				<div class="col-sm-8">
+					<a href="soju.jsp"><img src="img/soju/soju00.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju01.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju02.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju03.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju04.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju05.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju06.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju07.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju08.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju09.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju10.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju11.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju12.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju13.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju14.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+					<a href="soju.jsp"><img src="img/soju/soju15.png" class="rounded" alt="Cinque Terre" width="150" height="200"> </a>
+				</div>
 				<div class="col-sm-2"></div>
 			</div>
 		</div>
