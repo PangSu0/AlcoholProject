@@ -40,10 +40,15 @@
 				<div class="col-sm-5"></div>
 				<div class="col-sm-3">
 					<button type="button" class="btn btn-danger" onclick="location='home.jsp'">YES</button>
-					<button type="button" class="btn btn-danger">NO</button>
+					<button type="button" class="btn btn-danger"></button>
 					</div>
 				<div class="col-sm-4"></div>
 			</div>
 		</div>
 	</body>
 </html>
+<script>
+
+
+
+</script>
