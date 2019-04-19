@@ -25,7 +25,7 @@
 		<%@include file="title.jsp"%>
 	</div>
 	<div class="button">
-		<%@include file="button.jsp"%>
+		<%@include file="menu.jsp"%>
 	</div>
 	<div class="main">
 		<div class="row">
@@ -69,5 +69,3 @@
 	</div>
 </body>
 </html>
-
-<%@include file="menuMove.jsp"%>
