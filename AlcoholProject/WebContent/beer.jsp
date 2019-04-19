@@ -12,14 +12,14 @@
 			try {
 				DBManager db = DBManager.getInstance();
 				Connection con = db.open();
-				String query = "select var.variation from alcohol as al join variation as var on var.id=al.variation join category as cat on cat.id=al.category where cat.name='소주'";
+				String query = "select var.variation from alcohol as al join variation as var on var.id=al.variation join category as cat on cat.id=al.category where cat.name='맥주'";
 				PreparedStatement stmt = con.prepareStatement(query);
 				ResultSet rs = stmt.executeQuery();
 				while (rs.next()) {
 					String name = rs.getString("variation");
 		%>
 		<a href="alcohol_proc.jsp?name=<%=name%>"><img
-			src="img/soju/<%=name%>.PNG" class="rounded" alt="Cinque Terre">
+			src="img/beer/<%=name%>.PNG" class="rounded" alt="Cinque Terre">
 		</a>
 		<%
 			}
