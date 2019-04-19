@@ -3,35 +3,71 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="db.DBManager"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<%
-	try {
-		DBManager db = DBManager.getInstance();
-		Connection con = db.open();
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
-		String query = "select al.name, al.url, al.abv, var.variation, cat.name from alcohol as al join variation as var on var.id=al.variation join category as cat on cat.id=al.category";
-		PreparedStatement stmt = con.prepareStatement(query);
-		// 4. SQL (Query) ����
-		ResultSet rs = stmt.executeQuery();
-		// 5. (��ȸ��) ��ȸ��� ó��
-		while (rs.next()) {
-			String aUrl = rs.getString("al.url");
-			String aAbv = rs.getString("al.abv");
-			String aVariation = rs.getString("var.variation");
-			String aCategory = rs.getString("cat.name");
-%>
-<form method="post" action="">
-	<input type="text" name="variation" value="<%=aVariation%>"><br>
-	<input type="text" name="abv" value="<%=aAbv%>"><br> 
-	<input type="url" name="url" value="<%=aUrl%>">
-	<%-- 	<input type="text" name="category" value="<%=aCategory%>"><br> --%>
-</form>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<%
-	}
-	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-%>
+	<div class="container-title">
+		<%@include file="title.jsp"%>
+	</div>
+	<div class="button">
+		<%@include file="button.jsp"%>
+	</div>
+	<div class="main">
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<%
+					try {
+						DBManager db = DBManager.getInstance();
+						Connection con = db.open();
+						String name = request.getParameter("name");
+						//.split(".")[0];
+						String query = "select al.name, al.url, al.abv, var.variation, cat.name from alcohol as al join variation as var on var.id=al.variation join category as cat on cat.id=al.category where var.variation='"
+								+ name + "'";
+						PreparedStatement stmt = con.prepareStatement(query);
+						// 4. SQL (Query) 실행
+						ResultSet rs = stmt.executeQuery();
+						// 5. (조회시) 조회결과 처리
+						while (rs.next()) {
+							String aUrl = rs.getString("al.url");
+							String aAbv = rs.getString("al.abv");
+							String aVariation = rs.getString("var.variation");
+							String aCategory = rs.getString("cat.name");
+				%>
+				<ul class="list-group">
+					<li class="list-group-item">제품명: <%=aVariation%></li>
+					<li class="list-group-item">도수: <%=aAbv%>%
+					</li>
+					<li class="list-group-item"><a href=<%=aUrl%>>제품 정보</a></li>
+				</ul>
+				<%
+					}
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				%>
+
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+</body>
+</html>
+
+<%@include file="menuMove.jsp"%>
