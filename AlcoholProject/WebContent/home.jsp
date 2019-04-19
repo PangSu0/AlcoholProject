@@ -27,5 +27,3 @@
 		</div>
 	</body>
 </html>
-
-<%@include file="menuMove.jsp"%>
