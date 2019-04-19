@@ -9,18 +9,18 @@
 	try {
 		DBManager db = DBManager.getInstance();
 		Connection con = db.open();
-
-		String query = "select name, url, abv, variation, category from alcohol";
+		
+		String query = "select al.name, al.url, al.abv, var.variation, cat.name from alcohol as al join variation as var on var.id=al.variation join category as cat on cat.id=al.category";
 		PreparedStatement stmt = con.prepareStatement(query);
 		// 4. SQL (Query) 실행
 		ResultSet rs=stmt.executeQuery();
 		// 5. (조회시) 조회결과 처리
 		while(rs.next()) {
-		String aName = rs.getString("name");
-		String aUrl= rs.getString("url");
-		String aAbv = rs.getString("abv");
-		String aVariation = rs.getString("variation");
-		String aCategory = rs.getString("category");
+		String aName = rs.getString("al.name");
+		String aUrl= rs.getString("al.url");
+		String aAbv = rs.getString("al.abv");
+		String aVariation = rs.getString("var.variation");
+		String aCategory = rs.getString("cat.name");
 		
 %>
 <form method="post"  action="">
