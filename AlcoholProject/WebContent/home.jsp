@@ -20,9 +20,10 @@
 		</div>
 		<div class="main">
 			<div class="row">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8"><img src="img/map0.png" class="rounded" alt="Cinque Terre" width="723" height="715"></div>
-				<div class="col-sm-2"></div>
+				<div class="col-sm-1"></div>
+				<div class="col-sm-6"><img src="img/model1.jpg" class="rounded" alt="Cinque Terre" width="600" height="297"></div>
+				<div class="col-sm-4"><img src="img/model0.jpg" class="rounded" alt="Cinque Terre" width="275" height="297"></div>
+				<div class="col-sm-1"></div>
 			</div>
 		</div>
 	</body>
