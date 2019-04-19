@@ -26,10 +26,10 @@
 				<div class="col-sm-8">
 					<div class="btn-group">
 						<button type="button" class="btn btn-primary">소주</button>
-						<button type="button" class="btn btn-primary">맥주</button>
-						<button type="button" class="btn btn-primary">양주</button>
-						<button type="button" class="btn btn-primary">와인</button>
-						<button type="button" class="btn btn-primary">기타</button>
+						<button type="button" class="btn btn-primary" disabled>맥주</button>
+						<button type="button" class="btn btn-primary" disabled>양주</button>
+						<button type="button" class="btn btn-primary" disabled>와인</button>
+						<button type="button" class="btn btn-primary" disabled>기타</button>
 					</div>
     			</div>
 				<div class="col-sm-2"></div>
